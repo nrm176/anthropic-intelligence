@@ -1,0 +1,204 @@
+{
+  "id": "anthropic-brief-2026-10-08",
+  "date": "2026-10-08",
+  "coverage_window": "2026-10-07..2026-10-08",
+  "generated_at": "2026-10-08T08:15:55+09:00",
+  "language": "ja",
+  "source_count": 6,
+  "developments": [
+    {
+      "product": "Claude Haiku 5.5",
+      "event": "モデル公開",
+      "event_type": "model_release",
+      "summary": "1M context・128K output、adaptive thinking、100K token境界の段階料金",
+      "enterprise_implication": "大量処理向けルーティング改善",
+      "use_cases": [
+        "分類・抽出・要約"
+      ],
+      "technical_implications": [
+        "旧thinking APIとtokenizerの移行確認"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": false
+    },
+    {
+      "product": "Claude Sonnet 5.5",
+      "event": "cache read値下げ",
+      "event_type": "pricing",
+      "summary": "cache read $0.20から$0.10/MTokへ",
+      "enterprise_implication": "長時間agentのコスト削減",
+      "use_cases": [
+        "繰返しコンテキスト"
+      ],
+      "technical_implications": [
+        "cache hit率に基づき試算"
+      ],
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": false
+    },
+    {
+      "product": "Claude for Google Workspace",
+      "event": "Docs/Sheets/Slides直接編集beta",
+      "event_type": "integration",
+      "summary": "Googleファイル内のClaudeサイドバーから編集可能",
+      "enterprise_implication": "業務自動化と権限制御",
+      "use_cases": [
+        "KPI表の修正"
+      ],
+      "technical_implications": [
+        "承認・保持・監査条件を確認"
+      ],
+      "sources": [
+        {
+          "url": "https://support.claude.com/en/articles/16951679-use-claude-in-google-docs-sheets-and-slides",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": true,
+      "why_overlooked": "大型発表より詳細ドキュメントに記載",
+      "who_benefits": [
+        "AI Platform",
+        "企業IT管理者"
+      ],
+      "practical_example": "KPI表の修正"
+    },
+    {
+      "product": "Claude Enterprise",
+      "event": "Compliance API対応拡張",
+      "event_type": "governance",
+      "summary": "unified Claude experienceのchatがbetaで取得可能",
+      "enterprise_implication": "監査対象拡張",
+      "use_cases": [
+        "企業監査"
+      ],
+      "technical_implications": [
+        "既存キーでの収集を検証"
+      ],
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": false
+    },
+    {
+      "product": "Claude Managed Agents",
+      "event": "allowed_hostsをweb toolsに適用",
+      "event_type": "security",
+      "summary": "limited networkingのweb_search/web_fetchが許可ホストに制限",
+      "enterprise_implication": "Agentの外部接続統制",
+      "use_cases": [
+        "社内調査Agent"
+      ],
+      "technical_implications": [
+        "allowed_domainsとの整合性確認"
+      ],
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": true,
+      "why_overlooked": "大型発表より詳細ドキュメントに記載",
+      "who_benefits": [
+        "AI Platform",
+        "企業IT管理者"
+      ],
+      "practical_example": "社内調査Agent"
+    },
+    {
+      "product": "Claude SDK",
+      "event": "browser/computer use SDK beta",
+      "event_type": "sdk_release",
+      "summary": "Python/TypeScript SDKに自動化toolsetクラス追加",
+      "enterprise_implication": "社内操作Agent開発",
+      "use_cases": [
+        "UI自動化"
+      ],
+      "technical_implications": [
+        "承認callbackとURL policy"
+      ],
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/release-notes/overview",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": false
+    },
+    {
+      "product": "Claude Code",
+      "event": "/claude-api migrate",
+      "event_type": "developer_experience",
+      "summary": "Haiku 5.5移行のbreaking changesを支援",
+      "enterprise_implication": "移行負担軽減",
+      "use_cases": [
+        "既存API更新"
+      ],
+      "technical_implications": [
+        "回帰テスト必須"
+      ],
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": true,
+      "why_overlooked": "大型発表より詳細ドキュメントに記載",
+      "who_benefits": [
+        "AI Platform",
+        "企業IT管理者"
+      ],
+      "practical_example": "既存API更新"
+    },
+    {
+      "product": "Claude Platform",
+      "event": "Max/Team API credits",
+      "event_type": "pricing",
+      "summary": "Max 5x $100/月、Max 20x $200/月、Team最大$500/月",
+      "enterprise_implication": "PoCの初期費用軽減",
+      "use_cases": [
+        "Agent試作"
+      ],
+      "technical_implications": [
+        "クレジット残高確認"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "type": "primary"
+        }
+      ],
+      "confidence": "high",
+      "language": "ja",
+      "under_the_radar": false
+    }
+  ]
+}
